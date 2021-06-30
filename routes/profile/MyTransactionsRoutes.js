@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const MyTransactionController = require('../../app/Controllers/Profile/MyTransactionController');
 const isLoggedIn = require('../../middlewares/isLoggedIn');
-const myUser = require('../../middlewares/myUser');
+const myTransaction = require('../../middlewares/myTransaction');
+const UserPolicy = require('../../app/Policies/UserPolicy');
 
-router.get('/', isLoggedIn, myUser, MyTransactionController.index);
-router.post('/store', isLoggedIn, myUser, MyTransactionController.store);
-router.post('/update/:id', isLoggedIn, myUser, MyTransactionController.update);
-router.post('/destroy/:id', isLoggedIn, myUser, MyTransactionController.destroy);
-router.post('/search', isLoggedIn, myUser, MyTransactionController.search);
+router.get('/', isLoggedIn, UserPolicy.all, MyTransactionController.index);
+router.post('/store', isLoggedIn, UserPolicy.create, MyTransactionController.store);
+router.post('/update/:id', isLoggedIn, UserPolicy.update, MyTransactionController.update);
+router.post('/destroy/:id', isLoggedIn, UserPolicy.destroy, MyTransactionController.destroy);
+router.post('/search', isLoggedIn, myTransaction, MyTransactionController.search);
 
 module.exports = router;

@@ -34,7 +34,9 @@ async function isLoggedIn(req, res, next) {
                     errors: null
                 });
             } else {
-                req.user = user;
+                let user = jwt.decode(token);
+                //req.user = user;
+                req.userId = user.id;
                 next()
             }
         })

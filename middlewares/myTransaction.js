@@ -1,21 +1,24 @@
 const jwt = require('jsonwebtoken');
-const User = require('../app/Models/UserModel');
+const Transaction = require('../app/Models/TransactionModel');
 
 async function isUser(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
     let user = jwt.decode(token);
 
-    const myUser = await User.findOne({
+    const myUser = await Transaction.findOne({
         where: {
-            id: user.id,
+            userId: user.id
         }
     });
+
     if (!myUser) {
         return res.status(401).json({
             state: true,
             message: "Forbidden!",
-            data: null,
+            data: {
+                data: null,
+            },
             errors: null
         });
     }

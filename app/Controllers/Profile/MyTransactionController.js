@@ -19,89 +19,70 @@ const MyTransactionController = {
 };
 
 async function index(req, res) {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);
-    const myUser = await User.findOne({
-        where: {
-            id: user.id
-        }
-    });
-    if (!myUser) {
-        return res.status(401).json({
+    const page = +req.query.page || 1;
+    const perPage = 10;
+
+    if (req.query.all === 'all') {
+        return res.status(200).json({
             state: true,
-            message: "Forbidden!",
+            message: "Success!",
             data: {
-                data: null,
+                data: await Transaction.findAll({
+                    order: [
+                        ['id', 'ASC']
+                    ]
+                }),
             },
             errors: null
         });
     } else {
-        const page = +req.query.page || 1;
-        const perPage = 10;
-
-        if (req.query.all === 'all') {
-            return res.status(200).json({
-                state: true,
-                message: "Success!",
-                data: {
-                    data: await Transaction.findAll({
-                        order: [
-                            ['id', 'ASC']
-                        ]
-                    }),
+        const numberOfTransactions = await Transaction.findAndCountAll({
+            where: {
+                userId: user.id
+            },
+            include: [
+                {
+                    model: Bank,
+                    attributes: ['id', 'title'],
+                }
+            ],
+        });
+        const transactions = await Transaction.findAll({
+            where: {
+                userId: user.id
+            },
+            include: [
+                {
+                    model: Bank,
+                    attributes: ['id', 'title'],
                 },
-                errors: null
-            });
-        } else {
-            const numberOfTransactions = await Transaction.findAndCountAll({
-                where: {
-                    userId: user.id
-                },
-                include: [
-                    {
-                        model: Bank,
-                        attributes: ['id', 'title'],
-                    }
-                ],
-            });
-            const transactions = await Transaction.findAll({
-                where: {
-                    userId: user.id
-                },
-                include: [
-                    {
-                        model: Bank,
-                        attributes: ['id', 'title'],
-                    },
-                    {
-                        model: User,
-                        attributes: ['id', 'username'],
-                    }
-                ],
-                offset: ((page - 1) * perPage),
-                limit: perPage,
-                order: [
-                    ['createdAt', 'DESC']
-                ]
-            });
-            return res.status(200).json({
-                state: true,
-                message: "Success!",
-                data: {
-                    data: transactions,
-                    current_page: page,
-                    to: page + 1,
-                    from: page - 1,
-                    hasNextPage: perPage * (page < numberOfTransactions.count),
-                    hasPreviousPage: page > 1,
-                    per_page: perPage,
-                    last_page: Math.ceil(numberOfTransactions.count / perPage),
-                    total: Math.ceil(numberOfTransactions.count / perPage),
-                },
-                errors: null
-            });
-        }
+                {
+                    model: User,
+                    attributes: ['id', 'username'],
+                }
+            ],
+            offset: ((page - 1) * perPage),
+            limit: perPage,
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        });
+        return res.status(200).json({
+            state: true,
+            message: "Success!",
+            data: {
+                data: transactions,
+                current_page: page,
+                to: page + 1,
+                from: page - 1,
+                hasNextPage: perPage * (page < numberOfTransactions.count),
+                hasPreviousPage: page > 1,
+                per_page: perPage,
+                last_page: Math.ceil(numberOfTransactions.count / perPage),
+                total: Math.ceil(numberOfTransactions.count / perPage),
+            },
+            errors: null
+        });
     }
 }
 
