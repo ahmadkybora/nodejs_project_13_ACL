@@ -1,9 +1,9 @@
 const {Sequelize, Model, DataTypes} = require("sequelize");
 const dbCon = require('../../database/connection');
 const PermissionModel = require('./PermissionModel');
-const UserModel = require('./UserModel');
+const RoleModel = require('./RoleModel');
 
-const PermissionUser = dbCon.define('PermissionUser', {
+const PermissionRole = dbCon.define('PermissionRole', {
     id: {
         type: DataTypes.BIGINT,
         primaryKey: true,
@@ -20,10 +20,10 @@ const PermissionUser = dbCon.define('PermissionUser', {
         },
         onDelete: 'CASCADE',
     },
-    userId: {
+    roleId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'users',
+            model: 'roles',
             key: 'id'
         },
         onDelete: 'CASCADE',
@@ -38,21 +38,21 @@ const PermissionUser = dbCon.define('PermissionUser', {
     }
 });
 
-PermissionModel.belongsToMany(UserModel, {
-    through: PermissionUser,
+PermissionModel.belongsToMany(RoleModel, {
+    through: PermissionRole,
     onDelete: 'CASCADE',
     foreignKey: "permissionId",
 });
 
-UserModel.belongsToMany(PermissionModel, {
-    through: PermissionUser,
+RoleModel.belongsToMany(PermissionModel, {
+    through: PermissionRole,
     onDelete: 'CASCADE',
-    foreignKey: "userId",
+    foreignKey: "roleId",
 });
 
-/*UserModel.hasMany(PermissionUser);
-PermissionUser.belongsTo(UserModel);
-PermissionModel.hasMany(PermissionUser);
-PermissionUser.belongsTo(PermissionModel);*/
+/*RoleModel.hasMany(PermissionRole);
+PermissionRole.belongsTo(RoleModel);
+PermissionModel.hasMany(PermissionRole);
+PermissionRole.belongsTo(PermissionModel);*/
 
-module.exports = PermissionUser;
+module.exports = PermissionRole;

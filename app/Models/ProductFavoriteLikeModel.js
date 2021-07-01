@@ -56,9 +56,9 @@ UserModel.belongsToMany(ProductModel, {
     foreignKey: "userId",
 });
 
-UserModel.hasMany(ProductFavoriteLike);
+/*UserModel.hasMany(ProductFavoriteLike);
 ProductFavoriteLike.belongsTo(UserModel);
 ProductModel.hasMany(ProductFavoriteLike);
-ProductFavoriteLike.belongsTo(ProductModel);
+ProductFavoriteLike.belongsTo(ProductModel);*/
 
 module.exports = ProductFavoriteLike;

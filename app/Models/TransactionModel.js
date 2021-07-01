@@ -13,7 +13,7 @@ const Transaction = sequelize.define('Transaction', {
         unique: true,
         required: true,
     },
-    userId: {
+    /*userId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'users',
@@ -36,7 +36,7 @@ const Transaction = sequelize.define('Transaction', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },
+    },*/
     transaction_code: {
         type: DataTypes.STRING,
         //unique: true
@@ -70,6 +70,13 @@ const Transaction = sequelize.define('Transaction', {
         allowNull: false,
         type: DataTypes.DATE
     }
+});
+
+Transaction.belongsTo(User, {
+    foreignKey: 'userId',
+    constraint: true,
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
 });
 
 Transaction.belongsTo(User, {

@@ -8,8 +8,6 @@ const Formidable = require('formidable');
 const uuid = require('uuid').v4;
 const bcrypt = require('bcrypt');
 const {Op} = require("sequelize");
-const AccessControl = require('accesscontrol');
-const ac = new AccessControl();
 
 const UserController = {
     index,
@@ -22,66 +20,7 @@ const UserController = {
 };
 
 async function index(req, res) {
-
-
-    let grantObjects = {
-        reader: {
-            post: {
-                'read:any': ['*', '!id']
-            }
-        },
-        writer: {
-            post: {
-                'create:own': ['*'],
-                'read:any': ['*'],
-                'update:own': ['*'],
-                'delete:own': ['*']
-            }
-        },
-        editor: {
-            post: {
-                'create:any': ['*'],
-                'read:any': ['*'],
-                'update:any': ['*'],
-                'delete:any': ['*']
-            }
-        }
-    }
-    const ac = new AccessControl(grantsObject);
-
-    ac.grant('user')
-        .readOwn('profile', ["uid", "email", "address.*", "account.*", "!account.roles"])
-        .updateOwn('profile', ["uid", "email", "password", "address.*", "!account.roles"])
-        .deleteOwn('profile')
-        .createOwn('video', ["*", "!geo.*"])
-        .readAny('video')
-        .updateOwn('video', ["*", "!geo.*"])
-        .deleteOwn('video');
-
-    let role = "reader";
-    let model = "POST";
-    let permission = "re";
-    let column = ['*', '!id'];
-    let grantArray = [
-        {
-            role: role,
-            resource: model,
-            action: permission,
-            attributes: column
-        },
-        { role: 'reader', resource: 'post', action: 'read:any', attributes: '*, !id' },
-        { role: 'writer', resource: 'post', action: 'read:any', attributes: '*' },
-        { role: 'writer', resource: 'post', action: 'create:own', attributes: '*' },
-        { role: 'writer', resource: 'post', action: 'update:own', attributes: '*' },
-        { role: 'writer', resource: 'post', action: 'delete:own', attributes: '*' },
-        { role: 'editor', resource: 'post', action: 'read:any', attributes: '*' },
-        { role: 'editor', resource: 'post', action: 'create:any', attributes: '*' },
-        { role: 'editor', resource: 'post', action: 'update:any', attributes: '*' },
-        { role: 'editor', resource: 'post', action: 'delete:any', attributes: '*' },
-    ]
-
-    //const ac = new AccessControl(grantArray);
-    /*const page = +req.query.page || 1;
+    const page = +req.query.page || 1;
     const perPage = 1;
 
     if (req.query.all === 'all') {
@@ -123,7 +62,7 @@ async function index(req, res) {
             },
             errors: null
         });
-    }*/
+    }
 }
 
 async function show(req, res) {

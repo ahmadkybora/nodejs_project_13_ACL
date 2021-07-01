@@ -111,6 +111,7 @@ app.use('/api/panel/products', require('./routes/panel/productRoutes'));
 app.use('/api/panel/article-categories', require('./routes/panel/articleCategoryRoutes'));
 app.use('/api/panel/articles', require('./routes/panel/articleRoutes'));
 app.use('/api/panel/banks', require('./routes/panel/bankRoutes'));
+app.use('/api/panel/roles', require('./routes/panel/roleRoutes'));
 // profile account
 app.use('/api/profile/my-profile', require('./routes/profile/MyProfileRoutes'));
 app.use('/api/profile/my-transactions', require('./routes/profile/MyTransactionsRoutes'));
@@ -121,12 +122,20 @@ const redis_port = process.env.PORT || 6379;
 app.listen(port, () =>{
     console.log(`Server started on port ${port}`);
 });
-
+const Role = require('./app/Models/RoleModel');
+const Permission = require('./app/Models/PermissionModel');
+const PermissionRole = require('./app/Models/PermissionUserModel');
+const PermissionUser = require('./app/Models/PermissionRoleModel');
+app.use(Role);
+app.use(Permission);
+app.use(PermissionRole);
+app.use(PermissionUser);
+/*
 const Transaction = require('./app/Models/TransactionModel');
 const Bank = require('./app/Models/BankModel');
 app.use(Bank);
 app.use(Transaction);
-/*const ArticleLike = require('./app/Models/ArticleLikeModel');
+const ArticleLike = require('./app/Models/ArticleLikeModel');
 const ProductLike = require('./app/Models/ProductLikeModel');
 const ProductFavorite = require('./app/Models/ProductFavoriteModel');
 app.use(ArticleLike);
