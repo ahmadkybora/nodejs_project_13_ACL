@@ -1,7 +1,8 @@
 const Role = require('../../Models/RoleModel');
+const Permission = require('../../Models/PermissionModel');
+const PermissionRole = require('../../Models/PermissionRoleModel');
 const {Op} = require("sequelize");
 const AccessControl = require('accesscontrol');
-const ac = new AccessControl();
 
 const RoleController = {
     index,
@@ -15,7 +16,7 @@ const RoleController = {
 
 async function index(req, res) {
     const page = +req.query.page || 1;
-    const perPage = 1;
+    const perPage = 10;
 
     if (req.query.all === 'all') {
         return res.status(200).json({
@@ -35,6 +36,18 @@ async function index(req, res) {
         const roles = await Role.findAll({
             offset: ((page - 1) * perPage),
             limit: perPage,
+            include: [
+                {
+                    model: PermissionRole,
+                    attributes: ['roleId', 'permissionId'],
+                    include: [
+                        {
+                            model: Permission,
+                            attributes: ['id', 'name'],
+                        }
+                    ]
+                }
+            ],
             order: [
                 ['id', 'DESC']
             ]
@@ -60,7 +73,27 @@ async function index(req, res) {
 }
 
 async function store(req, res) {
-    await Role.create(req.newRol)
+    let role = req.newRol.role;
+    let permissions = req.newRol.permission;
+
+    await Role.create({
+        name: role
+    })
+        .then(async result => {
+            let roleId = await Role.findOne({
+                where: {
+                    name: role
+                }
+            });
+            if (result) {
+                for (let i = 0; i < permissions.length; i++) {
+                    await PermissionRole.create({
+                        roleId: roleId.id,
+                        permissionId: permissions[i]
+                    })
+                }
+            }
+        })
         .then(async () => {
             return res.status(201).json({
                 state: true,
@@ -106,6 +139,27 @@ async function destroy(req, res) {
 }
 
 async function permissions(req, res) {
+    const permissions = await Permission.findAll({
+        /*include: [
+            {
+                model: PermissionRole,
+                include: [
+                    {
+                        model: Role,
+                    }
+                ]
+            }
+        ]*/
+    });
+
+    return res.status(200).json({
+        state: true,
+        message: "Success!",
+        data: {
+            data: permissions,
+        },
+        errors: null
+    });
 }
 
 async function roles(req, res) {

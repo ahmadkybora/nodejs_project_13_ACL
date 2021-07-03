@@ -19,22 +19,23 @@ async function create(req, res, next) {
                 stringMax: "نقش نباید بیشتر از 255 کلمه باشد",
             }
         },
-        permissions: {
-            type: "string",
-            trim: true,
+        permission: {
+            type: "array",
+            items: "number",
+            /*trim: true,
             min: 2,
-            max: 255,
+            max: 255,*/
             messages: {
                 required: "مجوز الزامی است",
-                stringMin: "مجوز نباید کمتر از 2 کلمه باشد",
-                stringMax: "مجوز نباید بیشتر از 255 کلمه باشد",
+                /*stringMin: "مجوز نباید کمتر از 2 کلمه باشد",
+                stringMax: "مجوز نباید بیشتر از 255 کلمه باشد",*/
             }
         },
     };
 
     const newRol = {
-        name: req.name,
-        permission: req.permission,
+        role: req.body.role,
+        permission: req.body.permission,
     };
 
     const validate = v.validate(newRol, RoleRequest);

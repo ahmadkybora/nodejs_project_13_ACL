@@ -122,25 +122,20 @@ const redis_port = process.env.PORT || 6379;
 app.listen(port, () =>{
     console.log(`Server started on port ${port}`);
 });
-const Role = require('./app/Models/RoleModel');
+
+/*const Role = require('./app/Models/RoleModel');
 const Permission = require('./app/Models/PermissionModel');
 const PermissionRole = require('./app/Models/PermissionUserModel');
 const PermissionUser = require('./app/Models/PermissionRoleModel');
+const Transaction = require('./app/Models/TransactionModel');
+const Bank = require('./app/Models/BankModel');
+
 app.use(Role);
 app.use(Permission);
 app.use(PermissionRole);
 app.use(PermissionUser);
-/*
-const Transaction = require('./app/Models/TransactionModel');
-const Bank = require('./app/Models/BankModel');
 app.use(Bank);
-app.use(Transaction);
-const ArticleLike = require('./app/Models/ArticleLikeModel');
-const ProductLike = require('./app/Models/ProductLikeModel');
-const ProductFavorite = require('./app/Models/ProductFavoriteModel');
-app.use(ArticleLike);
-app.use(ProductLike);
-app.use(ProductFavorite);*/
+app.use(Transaction);*/
 
 module.exports = app;
 

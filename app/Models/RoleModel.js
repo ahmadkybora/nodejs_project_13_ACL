@@ -12,6 +12,8 @@ const RoleModel = dbCon.define('Role', {
     },
     name: {
         type: DataTypes.STRING,
+        unique: true,
+        required: true,
     },
     description: {
         type: DataTypes.STRING,

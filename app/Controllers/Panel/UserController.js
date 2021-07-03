@@ -1,4 +1,5 @@
 const User = require('../../Models/UserModel');
+const PermissionUser = require('../../Models/PermissionUserModel');
 const userRequest = require('../../../app/Requests/userRequest');
 const Validator = require('fastest-validator');
 const v = new Validator();
@@ -21,7 +22,7 @@ const UserController = {
 
 async function index(req, res) {
     const page = +req.query.page || 1;
-    const perPage = 1;
+    const perPage = 10;
 
     if (req.query.all === 'all') {
         return res.status(200).json({
@@ -143,8 +144,8 @@ async function store(req, res) {
                     quality: 90,
                 })
                 .toFile(newPath)
-                .then(() => {
-                    User.create({
+                .then(async () => {
+                    await User.create({
                         first_name: fields.first_name,
                         last_name: fields.last_name,
                         username: fields.username,
@@ -158,20 +159,36 @@ async function store(req, res) {
                         state: fields.state,
                         image: newPath,
                     })
-                        .then(async () => {
-                            return res.status(201).json({
-                                state: true,
-                                message: "Success!",
-                                data: await User.findAll(),
-                                errors: null
-                            });
+                        .then(async (result) => {
+                            if (result) {
+                                let userId = await User.findOne({
+                                    where: {
+                                        username: fields.username
+                                    }
+                                });
+                                for (let i = 0; i < fields.permission.length; i++) {
+                                    await PermissionUser.create({
+                                        userId: userId.id,
+                                        permissionId: fields.permission[i]
+                                    })
+                                }
+                            }
+                        })
+                        .then(async (result) => {
+                            if (result)
+                                return res.status(201).json({
+                                    state: true,
+                                    message: "Success!",
+                                    data: await User.findAll(),
+                                    errors: null
+                                });
                         });
                 })
-                .catch(async () => {
+                .catch(() => {
                     return res.status(200).json({
                         state: false,
                         message: "Failed!",
-                        data: await User.findAll(),
+                        data: User.findAll(),
                         errors: null
                     });
                 });

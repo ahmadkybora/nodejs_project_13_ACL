@@ -50,9 +50,9 @@ RoleModel.belongsToMany(PermissionModel, {
     foreignKey: "roleId",
 });
 
-/*RoleModel.hasMany(PermissionRole);
+RoleModel.hasMany(PermissionRole);
 PermissionRole.belongsTo(RoleModel);
 PermissionModel.hasMany(PermissionRole);
-PermissionRole.belongsTo(PermissionModel);*/
+PermissionRole.belongsTo(PermissionModel);
 
 module.exports = PermissionRole;
