@@ -23,7 +23,7 @@ async function index(req, res) {
     const page = +req.query.page || 1;
     const perPage = 1;
 
-    if (req.query === 'all') {
+    if (req.query.all === 'all') {
         return res.status(200).json({
             state: true,
             message: "Success!",
@@ -31,7 +31,7 @@ async function index(req, res) {
                 data: await Brand.findAll({
                     include: {
                         model: Employee,
-                        attributes: ['id', 'username'],
+                        //attributes: ['id', 'username'],
                     }
                 })
             },

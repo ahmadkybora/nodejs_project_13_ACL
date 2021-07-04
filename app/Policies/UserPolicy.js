@@ -1,4 +1,8 @@
 const User = require('../Models/UserModel');
+const Role = require('../Models/RoleModel');
+const RoleUser = require('../Models/RoleUserModel');
+const Permission = require('../Models/PermissionModel');
+const PermissionUser = require('../Models/PermissionUserModel');
 const jwt = require('jsonwebtoken');
 
 const UserPolicy = {
@@ -9,23 +13,46 @@ const UserPolicy = {
     destroy,
 };
 
-async function all(req, res, next) {
-    /*console.log(req.userId);
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);*/
+let role = '';
+let permissions = '';
+let userId = '';
 
-    const myUser = await User.findOne({
+async function all(req, res, next) {
+    const myRole = await Role.findOne({
+        where: {
+            name: 'Super Admin',
+        },
+    });
+    if (myRole) {
+        role = await RoleUser.findOne({
+            where: {
+                userId: req.userId,
+                roleId: myRole.id,
+            }
+        });
+    }
+
+    const myPermission = await Permission.findOne({
+        where: {
+            name: 'view-user',
+        },
+    });
+    if (myPermission) {
+        permissions = await PermissionUser.findOne({
+            where: {
+                userId: req.userId,
+                permissionId: myPermission.id,
+            }
+        });
+    }
+
+    userId = await User.findOne({
         where: {
             id: req.userId
         }
     });
-    /*const role = await Role.findOne({
-        where: {
 
-        }
-    })*/
-    if (!myUser) {
+    if (!role && !permissions && !userId) {
         return res
             .status(403)
             .json({
@@ -41,21 +68,41 @@ async function all(req, res, next) {
 }
 
 async function view(req, res, next) {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);
-
-    const myUser = await User.findOne({
+    const myRole = await Role.findOne({
         where: {
-            id: user.id
+            name: 'Super Admin',
+        },
+    });
+    if (myRole) {
+        role = await RoleUser.findOne({
+            where: {
+                userId: req.userId,
+                roleId: myRole.id,
+            }
+        });
+    }
+
+    const myPermission = await Permission.findOne({
+        where: {
+            name: 'view-user',
+        },
+    });
+    if (myPermission) {
+        permissions = await PermissionUser.findOne({
+            where: {
+                userId: req.userId,
+                permissionId: myPermission.id,
+            }
+        });
+    }
+
+    userId = await User.findOne({
+        where: {
+            id: req.userId
         }
     });
-    /*const role = await Role.findOne({
-        where: {
 
-        }
-    })*/
-    if (!myUser) {
+    if (!role && !permissions && !userId) {
         return res
             .status(403)
             .json({
@@ -71,21 +118,41 @@ async function view(req, res, next) {
 }
 
 async function create(req, res, next) {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);
-
-    const myUser = await User.findOne({
+    const myRole = await Role.findOne({
         where: {
-            id: user.id
+            name: 'Super Admin',
+        },
+    });
+    if (myRole) {
+        role = await RoleUser.findOne({
+            where: {
+                userId: req.userId,
+                roleId: myRole.id,
+            }
+        });
+    }
+
+    const myPermission = await Permission.findOne({
+        where: {
+            name: 'create-user',
+        },
+    });
+    if (myPermission) {
+        permissions = await PermissionUser.findOne({
+            where: {
+                userId: req.userId,
+                permissionId: myPermission.id,
+            }
+        });
+    }
+
+    userId = await User.findOne({
+        where: {
+            id: req.userId
         }
     });
-    /*const role = await Role.findOne({
-        where: {
 
-        }
-    })*/
-    if (!myUser) {
+    if (!role && !permissions && !userId) {
         return res
             .status(403)
             .json({
@@ -101,21 +168,41 @@ async function create(req, res, next) {
 }
 
 async function update(req, res, next) {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);
-
-    const myUser = await User.findOne({
+    const myRole = await Role.findOne({
         where: {
-            id: user.id
+            name: 'Super Admin',
+        },
+    });
+    if (myRole) {
+        role = await RoleUser.findOne({
+            where: {
+                userId: req.userId,
+                roleId: myRole.id,
+            }
+        });
+    }
+
+    const myPermission = await Permission.findOne({
+        where: {
+            name: 'update-user',
+        },
+    });
+    if (myPermission) {
+        permissions = await PermissionUser.findOne({
+            where: {
+                userId: req.userId,
+                permissionId: myPermission.id,
+            }
+        });
+    }
+
+    userId = await User.findOne({
+        where: {
+            id: req.userId
         }
     });
-    /*const role = await Role.findOne({
-        where: {
 
-        }
-    })*/
-    if (!myUser) {
+    if (!role && !permissions && !userId) {
         return res
             .status(403)
             .json({
@@ -131,21 +218,41 @@ async function update(req, res, next) {
 }
 
 async function destroy(req, res, next) {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-    let user = jwt.decode(token);
-
-    const myUser = await User.findOne({
+    const myRole = await Role.findOne({
         where: {
-            id: user.id
+            name: 'Super Admin',
+        },
+    });
+    if (myRole) {
+        role = await RoleUser.findOne({
+            where: {
+                userId: req.userId,
+                roleId: myRole.id,
+            }
+        });
+    }
+
+    const myPermission = await Permission.findOne({
+        where: {
+            name: 'destroy-user',
+        },
+    });
+    if (myPermission) {
+        permissions = await PermissionUser.findOne({
+            where: {
+                userId: req.userId,
+                permissionId: myPermission.id,
+            }
+        });
+    }
+
+    userId = await User.findOne({
+        where: {
+            id: req.userId
         }
     });
-    /*const role = await Role.findOne({
-        where: {
 
-        }
-    })*/
-    if (!myUser) {
+    if (!role && !permissions && !userId) {
         return res
             .status(403)
             .json({

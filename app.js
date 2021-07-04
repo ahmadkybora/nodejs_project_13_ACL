@@ -123,10 +123,11 @@ app.listen(port, () =>{
     console.log(`Server started on port ${port}`);
 });
 
-/*const Role = require('./app/Models/RoleModel');
+const Role = require('./app/Models/RoleModel');
 const Permission = require('./app/Models/PermissionModel');
 const PermissionRole = require('./app/Models/PermissionUserModel');
 const PermissionUser = require('./app/Models/PermissionRoleModel');
+const RoleUser = require('./app/Models/RoleUserModel');
 const Transaction = require('./app/Models/TransactionModel');
 const Bank = require('./app/Models/BankModel');
 
@@ -134,8 +135,9 @@ app.use(Role);
 app.use(Permission);
 app.use(PermissionRole);
 app.use(PermissionUser);
+app.use(RoleUser);
 app.use(Bank);
-app.use(Transaction);*/
+app.use(Transaction);
 
 module.exports = app;
 

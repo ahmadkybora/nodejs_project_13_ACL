@@ -44,7 +44,7 @@ async function index(req, res) {
                         {
                             model: Permission,
                             attributes: ['id', 'name'],
-                        }
+                        },
                     ]
                 }
             ],

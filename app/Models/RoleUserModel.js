@@ -1,9 +1,9 @@
 const {Sequelize, Model, DataTypes} = require("sequelize");
 const dbCon = require('../../database/connection');
-const ProductModel = require('./ProductModel');
 const UserModel = require('./UserModel');
+const RoleModel = require('./RoleModel');
 
-const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
+const RoleUser = dbCon.define('RoleUser', {
     id: {
         type: DataTypes.BIGINT,
         primaryKey: true,
@@ -12,28 +12,22 @@ const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
         unique: true,
         required: true,
     },
-    /*productId: {
+    /*permissionId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'products',
+            model: 'permissions',
             key: 'id'
         },
         onDelete: 'CASCADE',
     },
-    userId: {
+    roleId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'users',
+            model: 'roles',
             key: 'id'
         },
         onDelete: 'CASCADE',
     },*/
-    isFavorite: {
-        type: DataTypes.BOOLEAN,
-    },
-    isLike: {
-        type: DataTypes.BOOLEAN,
-    },
     createdAt: {
         allowNull: false,
         type: DataTypes.DATE
@@ -44,21 +38,21 @@ const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
     }
 });
 
-ProductModel.belongsToMany(UserModel, {
-    through: ProductFavoriteLike,
-    onDelete: 'CASCADE',
-    foreignKey: "productId",
-});
-
-UserModel.belongsToMany(ProductModel, {
-    through: ProductFavoriteLike,
+UserModel.belongsToMany(RoleModel, {
+    through: RoleUser,
     onDelete: 'CASCADE',
     foreignKey: "userId",
 });
 
-UserModel.hasMany(ProductFavoriteLike);
-ProductFavoriteLike.belongsTo(UserModel);
-ProductModel.hasMany(ProductFavoriteLike);
-ProductFavoriteLike.belongsTo(ProductModel);
+RoleModel.belongsToMany(UserModel, {
+    through: RoleUser,
+    onDelete: 'CASCADE',
+    foreignKey: "roleId",
+});
 
-module.exports = ProductFavoriteLike;
+RoleModel.hasMany(RoleUser);
+RoleUser.belongsTo(RoleModel);
+UserModel.hasMany(RoleUser);
+RoleUser.belongsTo(UserModel);
+
+module.exports = RoleUser;

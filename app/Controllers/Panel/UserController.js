@@ -1,5 +1,8 @@
 const User = require('../../Models/UserModel');
 const PermissionUser = require('../../Models/PermissionUserModel');
+const RoleUser = require('../../Models/RoleUserModel');
+const Permission = require('../../Models/PermissionModel');
+const Role = require('../../Models/RoleModel');
 const userRequest = require('../../../app/Requests/userRequest');
 const Validator = require('fastest-validator');
 const v = new Validator();
@@ -12,14 +15,18 @@ const {Op} = require("sequelize");
 
 const UserController = {
     index,
-    show,
     store,
-    edit,
     update,
     destroy,
     search
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<*|Json|Promise<any>>}
+ */
 async function index(req, res) {
     const page = +req.query.page || 1;
     const perPage = 10;
@@ -42,6 +49,28 @@ async function index(req, res) {
         const users = await User.findAll({
             offset: ((page - 1) * perPage),
             limit: perPage,
+            include: [
+                {
+                    model: PermissionUser,
+                    attributes: ['userId', 'permissionId'],
+                    include: [
+                        {
+                            model: Permission,
+                            attributes: ['id', 'name'],
+                        }
+                    ]
+                },
+                {
+                    model: RoleUser,
+                    attributes: ['userId', 'roleId'],
+                    include: [
+                        {
+                            model: Role,
+                            attributes: ['id', 'name'],
+                        }
+                    ]
+                }
+            ],
             order: [
                 ['id', 'DESC']
             ]
@@ -66,40 +95,12 @@ async function index(req, res) {
     }
 }
 
-async function show(req, res) {
-    /*EmployeeDB.findOne({
-        _id: req.params.id
-    }).then(employee => {
-        res.send(employee);
-    })*/
-
-    try {
-        const user = await User.findByPk(req.params.id);
-        res.render("panel/users/show", {
-            state: true,
-            message: "success",
-            user: user,
-        });
-
-    } catch (err) {
-        Handler.Error_404(req, res);
-    }
-
-    /*
-        await User.findByPk(req.params.id)
-            .then(user => {
-                res.json({
-                    state: true,
-                    message: "success",
-                    data: user,
-                })
-            }).catch(err => {
-                console.log(err)
-            });
-    */
-
-}
-
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<void>}
+ */
 async function store(req, res) {
     let form = new Formidable.IncomingForm();
     form.parse(req, async (err, fields, files) => {
@@ -166,11 +167,21 @@ async function store(req, res) {
                                         username: fields.username
                                     }
                                 });
-                                for (let i = 0; i < fields.permission.length; i++) {
-                                    await PermissionUser.create({
-                                        userId: userId.id,
-                                        permissionId: fields.permission[i]
-                                    })
+                                if (fields.permission !== undefined) {
+                                    for (let i = 0; i < fields.permission.length; i++) {
+                                        await PermissionUser.create({
+                                            userId: userId.id,
+                                            permissionId: fields.permission[i]
+                                        })
+                                    }
+                                }
+                                if (fields.role !== undefined) {
+                                    for (let i = 0; i < fields.role.length; i++) {
+                                        await RoleUser.create({
+                                            userId: userId.id,
+                                            roleId: fields.role[i]
+                                        })
+                                    }
                                 }
                             }
                         })
@@ -207,17 +218,12 @@ async function store(req, res) {
     });
 }
 
-async function edit(req, res) {
-    await User.findByPk(req.params.id)
-        .then((user) => {
-            res.render('panel/users/edit', {
-                user: user
-            });
-        }).catch((err) => {
-            console.log(err)
-        });
-}
-
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<void>}
+ */
 async function update(req, res) {
     try {
         await User.update(req.body, {
@@ -231,6 +237,12 @@ async function update(req, res) {
     }
 }
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<void>}
+ */
 async function destroy(req, res) {
     try {
         await User.destroy({
@@ -244,6 +256,12 @@ async function destroy(req, res) {
     }
 }
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<*|Json|Promise<any>>}
+ */
 async function search(req, res) {
     const search = req.body.full_text_search;
     const page = +req.query.page || 1;
