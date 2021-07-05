@@ -1,4 +1,3 @@
-//const isLoggedIn = require('../../../middlewares/sessions/isLoggedIn');
 const {formatDate} = require('../../../helpers/jalali');
 const isLoggedIn = require('../../../middlewares/isLoggedIn');
 
@@ -7,11 +6,16 @@ const DashboardController = {
 };
 
 function index(req, res) {
-    res.render("panel/dashboard", {
-        //message: req.flash("success"),
-        formatDate,
-        isLoggedIn,
-    });
+    return res
+        .status(403)
+        .json({
+            state: true,
+            message: "Forbidden!",
+            data: {
+                data: null,
+            },
+            errors: null
+        });
 }
 
 module.exports = DashboardController;

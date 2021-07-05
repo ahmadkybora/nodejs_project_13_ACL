@@ -114,6 +114,7 @@ app.use('/api/panel/banks', require('./routes/panel/bankRoutes'));
 app.use('/api/panel/roles', require('./routes/panel/roleRoutes'));
 // profile account
 app.use('/api/profile/my-profile', require('./routes/profile/MyProfileRoutes'));
+app.use('/api/profile/my-cart', require('./routes/profile/MyCartsRoutes'));
 app.use('/api/profile/my-transactions', require('./routes/profile/MyTransactionsRoutes'));
 
 const port = process.env.PORT || 3001;
@@ -123,7 +124,7 @@ app.listen(port, () =>{
     console.log(`Server started on port ${port}`);
 });
 
-const Role = require('./app/Models/RoleModel');
+/*const Role = require('./app/Models/RoleModel');
 const Permission = require('./app/Models/PermissionModel');
 const PermissionRole = require('./app/Models/PermissionUserModel');
 const PermissionUser = require('./app/Models/PermissionRoleModel');
@@ -137,7 +138,7 @@ app.use(PermissionRole);
 app.use(PermissionUser);
 app.use(RoleUser);
 app.use(Bank);
-app.use(Transaction);
+app.use(Transaction);*/
 
 module.exports = app;
 

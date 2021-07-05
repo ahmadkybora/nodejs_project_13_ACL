@@ -20,7 +20,7 @@ const BrandController = {
 };
 
 async function index(req, res) {
-    const page = +req.query.page || 1;
+/*    const page = +req.query.page || 1;
     const perPage = 1;
 
     if (req.query.all === 'all') {
@@ -66,8 +66,7 @@ async function index(req, res) {
             },
             errors: null
         });
-    }
-
+    }*/
 }
 
 async function create(req, res) {

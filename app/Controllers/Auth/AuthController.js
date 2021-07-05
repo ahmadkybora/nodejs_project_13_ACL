@@ -1,4 +1,6 @@
 const User = require('../../../app/Models/UserModel');
+const Permission = require('../../../app/Models/PermissionModel');
+const PermissionUser = require('../../../app/Models/PermissionUserModel');
 const Token = require('../../../app/Models/TokenModel');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
@@ -28,6 +30,12 @@ async function pub(req, res) {
     });
 }
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns {Promise<*|Json|Promise<any>>}
+ */
 async function login(req, res) {
     console.log(req.body);
     const user = await User.findOne({
@@ -66,6 +74,22 @@ async function login(req, res) {
             }
         });
 
+    const permissions = await PermissionUser.findAll({
+        attributes: ['userId', 'permissionId'],
+        where: {
+            userId: user.id,
+        },
+        include: [
+            {
+                model: Permission,
+                attributes: ['id', 'name']
+            }
+        ]
+    });
+
+    const roles = '';
+    const isAdmin = '';
+
     return res.status(200).json({
         state: true,
         message: "your are logged in!",
@@ -73,6 +97,9 @@ async function login(req, res) {
             first_name: user.first_name,
             last_name: user.last_name,
             username: user.username,
+            permissions,
+            roles,
+            isAdmin,
             accessToken,
             refreshToken
         },
@@ -80,6 +107,13 @@ async function login(req, res) {
     });
 }
 
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ * @returns {Promise<void>}
+ */
 async function handleLogin(req, res, next) {
     await passport.authenticate("local", {
         successRedirect: "panel/dashboard",
