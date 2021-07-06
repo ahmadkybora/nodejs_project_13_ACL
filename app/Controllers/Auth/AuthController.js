@@ -88,7 +88,7 @@ async function login(req, res) {
     });
 
     const roles = '';
-    const isAdmin = '';
+    const isAdmin = true;
 
     return res.status(200).json({
         state: true,
