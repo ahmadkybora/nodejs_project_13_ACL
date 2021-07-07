@@ -37,38 +37,61 @@ const PermissionModel = dbCon.define('Permission', {
 });
 
 /*const permissions = [
+    'all-employee',
     'view-employee',
     'create-employee',
     'update-employee',
     'destroy-employee',
+    'all-user',
     'view-user',
     'create-user',
     'update-user',
     'destroy-user',
+    'all-brand',
     'view-brand',
     'create-brand',
     'update-brand',
     'destroy-brand',
+    'all-product-category',
     'view-product-category',
     'create-product-category',
     'update-product-category',
     'destroy-product-category',
+    'all-product',
     'view-product',
     'create-product',
     'update-product',
     'destroy-product',
+    'all-article-category',
     'view-article-category',
     'create-article-category',
     'update-article-category',
     'destroy-article-category',
+    'all-article',
     'view-article',
     'create-article',
     'update-article',
     'destroy-article',
+    'all-role',
     'view-role',
     'create-role',
     'update-role',
     'destroy-role',
+    'all-order',
+    'view-order',
+    'create-order',
+    'update-order',
+    'destroy-order',
+    'all-bank',
+    'view-bank',
+    'create-bank',
+    'update-bank',
+    'destroy-bank',
+    'all-transaction',
+    'view-transaction',
+    'create-transaction',
+    'update-transaction',
+    'destroy-transaction',
 ];
 
 for (let i = 0; i < permissions.length; i++) {
@@ -76,7 +99,6 @@ for (let i = 0; i < permissions.length; i++) {
         name: permissions[i]
     });
 }*/
-
 
 module.exports = PermissionModel;
 

@@ -1,5 +1,6 @@
 const {Sequelize, Model, DataTypes} = require("sequelize");
 const dbCon = require('../../database/connection');
+const bcrypt = require('bcrypt');
 
 const User = dbCon.define('User', {
     id: {
@@ -66,6 +67,29 @@ const User = dbCon.define('User', {
         type: DataTypes.DATE
     }
 });
+
+/*const user = async () => {
+    const password = '12345678';
+    const hash = await bcrypt.hash(password, 10);
+
+    const admin = await User.create({
+        first_name: 'admin',
+        last_name: 'admin',
+        username: 'admin',
+        email: 'admin@gmail.com',
+        mobile: '1234567890',
+        home_phone: '1234567890',
+        zip_code: '1234567890',
+        password: hash,
+        home_address: 'i have no home address',
+        work_address: 'i have no work address',
+        state: 'ACTIVE',
+        image: '',
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+    });
+};
+user();*/
 
 module.exports = User;
 

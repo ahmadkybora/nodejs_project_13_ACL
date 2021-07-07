@@ -135,7 +135,7 @@ async function store(req, res) {
             let oldPath = files.image.path;
             const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
             let fileName = `${uniqueSuffix}_${uuid()}_${files.image.name}`;
-            let newPath = `C:/nodejs_projects/nodejs_project_10/public/storage/users/${fileName}`;
+            let newPath = `C:/nodejs_projects/nodejs_project_13_ACL/public/storage/users/${fileName}`;
 
             await sharp(oldPath)
                 .resize(125, 90)
@@ -146,7 +146,7 @@ async function store(req, res) {
                 })
                 .toFile(newPath)
                 .then(async () => {
-                    await User.create({
+                    const newUser = await User.create({
                         first_name: fields.first_name,
                         last_name: fields.last_name,
                         username: fields.username,
@@ -159,41 +159,39 @@ async function store(req, res) {
                         work_address: fields.work_address,
                         state: fields.state,
                         image: newPath,
-                    })
-                        .then(async (result) => {
-                            if (result) {
-                                let userId = await User.findOne({
-                                    where: {
-                                        username: fields.username
-                                    }
-                                });
-                                if (fields.permission !== undefined) {
-                                    for (let i = 0; i < fields.permission.length; i++) {
-                                        await PermissionUser.create({
-                                            userId: userId.id,
-                                            permissionId: fields.permission[i]
-                                        })
-                                    }
-                                }
-                                if (fields.role !== undefined) {
-                                    for (let i = 0; i < fields.role.length; i++) {
-                                        await RoleUser.create({
-                                            userId: userId.id,
-                                            roleId: fields.role[i]
-                                        })
-                                    }
+                    });
+
+                    if (newUser) {
+                        let userId = await User.findOne({
+                            where: {
+                                username: fields.username
+                            }
+                        });
+                        if (userId) {
+                            if (fields.permission !== undefined && fields.permission !== null) {
+                                for (let i = 0; i < fields.permission.length; i++) {
+                                    PermissionUser.create({
+                                        userId: userId.id,
+                                        permissionId: fields.permission[i]
+                                    })
                                 }
                             }
-                        })
-                        .then(async (result) => {
-                            if (result)
-                                return res.status(201).json({
-                                    state: true,
-                                    message: "Success!",
-                                    data: await User.findAll(),
-                                    errors: null
-                                });
+                            if (fields.role !== undefined && fields.role !== null) {
+                                for (let i = 0; i < fields.role.length; i++) {
+                                    RoleUser.create({
+                                        userId: userId.id,
+                                        roleId: fields.role[i]
+                                    })
+                                }
+                            }
+                        }
+                        return res.status(201).json({
+                            state: true,
+                            message: "Success!",
+                            data: await User.findAll(),
+                            errors: null
                         });
+                    }
                 })
                 .catch(() => {
                     return res.status(200).json({
