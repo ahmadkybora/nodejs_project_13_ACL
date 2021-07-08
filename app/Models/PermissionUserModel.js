@@ -12,13 +12,14 @@ const PermissionUser = dbCon.define('PermissionUser', {
         unique: true,
         required: true,
     },
-    /*permissionId: {
+    permissionId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'permissions',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     userId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const PermissionUser = dbCon.define('PermissionUser', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     createdAt: {
         allowNull: false,
         type: DataTypes.DATE
@@ -41,12 +43,14 @@ const PermissionUser = dbCon.define('PermissionUser', {
 PermissionModel.belongsToMany(UserModel, {
     through: PermissionUser,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "permissionId",
 });
 
 UserModel.belongsToMany(PermissionModel, {
     through: PermissionUser,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "userId",
 });
 

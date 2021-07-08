@@ -168,12 +168,23 @@ async function store(req, res) {
                             }
                         });
                         if (userId) {
+
                             if (fields.permission !== undefined && fields.permission !== null) {
-                                for (let i = 0; i < fields.permission.length; i++) {
-                                    PermissionUser.create({
+                                for (let permission in fields.permission) {
+                                    console.log(fields.permission);
+                                    console.log(permission);
+                                    /*await PermissionUser.create({
                                         userId: userId.id,
                                         permissionId: fields.permission[i]
+                                    }).then((result) => {
+                                        if (result) {
+                                            console.log(fields.permission);
+                                            console.log(userId.id);
+                                        }
                                     })
+                                        .catch(function (err) {
+                                            console.log(err);
+                                        });*/
                                 }
                             }
                             if (fields.role !== undefined && fields.role !== null) {

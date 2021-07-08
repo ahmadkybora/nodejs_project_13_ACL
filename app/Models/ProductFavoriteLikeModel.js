@@ -12,13 +12,14 @@ const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
         unique: true,
         required: true,
     },
-    /*productId: {
+    productId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'products',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     userId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     isFavorite: {
         type: DataTypes.BOOLEAN,
     },
@@ -47,12 +49,14 @@ const ProductFavoriteLike = dbCon.define('ProductFavoriteLike', {
 ProductModel.belongsToMany(UserModel, {
     through: ProductFavoriteLike,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "productId",
 });
 
 UserModel.belongsToMany(ProductModel, {
     through: ProductFavoriteLike,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "userId",
 });
 

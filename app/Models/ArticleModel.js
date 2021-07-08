@@ -12,13 +12,14 @@ const Article = dbCon.define('Article', {
         unique: true,
         required: true,
     },
-    /*categoryId: {
+    categoryId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'categories',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     employeeId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const Article = dbCon.define('Article', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     name: {
         type: DataTypes.STRING,
     },

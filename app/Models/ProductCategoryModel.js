@@ -12,13 +12,14 @@ const ProductCategory = dbCon.define('ProductCategory', {
         unique: true,
         required: true,
     },
-    /*employeeId: {
+    employeeId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'employees',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     brandId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const ProductCategory = dbCon.define('ProductCategory', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     name: {
         type: DataTypes.STRING,
         required: true,

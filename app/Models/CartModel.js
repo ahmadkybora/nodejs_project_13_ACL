@@ -12,13 +12,14 @@ const Cart = sequelize.define('Cart', {
         unique: true,
         required: true,
     },
-    /*userId: {
+    userId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'users',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     productId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const Cart = sequelize.define('Cart', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     quantity: {
         type: DataTypes.STRING,
     },

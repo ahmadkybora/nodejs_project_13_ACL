@@ -10,13 +10,14 @@ const Bank = dbCon.define('Bank', {
         unique: true,
         required: true,
     },
-    /*categoryId: {
+    categoryId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'categories',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     employeeId: {
         type: DataTypes.INTEGER,
@@ -25,7 +26,8 @@ const Bank = dbCon.define('Bank', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     account_number: {
         type: DataTypes.STRING,
     },

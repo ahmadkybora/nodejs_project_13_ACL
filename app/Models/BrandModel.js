@@ -11,14 +11,15 @@ const Brand = sequelize.define('Brand', {
         unique: true,
         required: true,
     },
-    /*employeeId: {
+    employeeId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'employees',
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     name: {
         type: DataTypes.STRING,
         unique: true

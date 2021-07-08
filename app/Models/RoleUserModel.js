@@ -12,13 +12,14 @@ const RoleUser = dbCon.define('RoleUser', {
         unique: true,
         required: true,
     },
-    /*permissionId: {
+    permissionId: {
         type: DataTypes.INTEGER,
         references: {
             model: 'permissions',
             key: 'id'
         },
         onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     },
     roleId: {
         type: DataTypes.INTEGER,
@@ -27,7 +28,8 @@ const RoleUser = dbCon.define('RoleUser', {
             key: 'id'
         },
         onDelete: 'CASCADE',
-    },*/
+        onUpdate: 'CASCADE',
+    },
     createdAt: {
         allowNull: false,
         type: DataTypes.DATE
@@ -41,12 +43,14 @@ const RoleUser = dbCon.define('RoleUser', {
 UserModel.belongsToMany(RoleModel, {
     through: RoleUser,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "userId",
 });
 
 RoleModel.belongsToMany(UserModel, {
     through: RoleUser,
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
     foreignKey: "roleId",
 });
 

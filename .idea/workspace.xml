@@ -3,76 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="34c1b46f-f3c6-452c-847c-4dc4d857f6b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PermissionModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PermissionModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571480396-927385219_5adf87fd-0957-44fa-bf6d-f762fb6d70ac_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571496317-239929178_7b7b9930-9540-4540-9bf5-2be699fcfca1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571592798-293979992_21eb3371-da86-4c07-b843-81e406b4cc56_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571657049-916562318_93c3839d-4c0e-409e-bc8b-c0fa01b4efbd_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571742149-383347375_2fabfbf5-c466-47ca-88bf-1f17a364e177_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571783455-429528304_f5f4e438-d1b1-4cc2-b60f-675a6f396289_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571783457-385361489_00607f60-1ac7-4630-83de-9c18098640e3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571783817-850893001_dc05a5fb-7d8b-4022-8070-2a615c667a1b_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571847052-62783664_2225a1f1-ab4f-43a9-9fe5-33f772824964_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571848685-269891573_d7596482-d480-4be8-9c05-ad96977fc225_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571928757-692111342_eaafe4c6-85f3-435c-8db3-1ad2627b65c3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623571948744-715125023_ea678407-2b23-4610-8f00-700cbff650fa_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572153487-102292596_e25ee64f-ae80-41ef-b58a-fad63b79d772_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572155292-619541798_309d72ee-6850-4852-8d33-bae921f7eae4_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572181796-801574397_f8108aa2-1367-4c6d-9ac0-1d19f859969a_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572182771-537417883_bc11a20f-0938-46e1-a524-5b1c4be37b33_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572314459-474373550_a3526c47-28ec-4053-8e4f-5a7f56794103_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572380923-792853870_157da5d5-8fa0-419c-a00b-8bc957ba221a_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572416535-549747574_711b90be-a6d7-4c41-b8f9-206be522a042_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572417609-373040215_160f495a-a3da-47b7-8cbe-58fd8951b253_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572468462-346012124_8542a496-cafa-4076-8e11-99d583a96f95_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572469656-776362749_dc04ac4f-ee60-4643-97fd-c3e36e284e1f_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572528598-966689830_7c7627cf-838f-43ce-8f8b-a97963e4fa6a_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572530934-170177113_667d6efc-d804-4362-9600-86c41e762912_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623572552130-930444401_4e1808bd-2f50-411f-9966-31a96dad37ad_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623576791645-761288940_999fbd88-36ee-4e54-ab25-63e055abe78e_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623577014316-706830232_f54fcce3-8a31-453b-b4b2-4a5fead8c134_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623580989248-674413189_a430d1be-929b-4bf7-87ec-ee5eab86adb7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623585640231-200239728_674b27c6-e149-420f-aa54-76c4741a4355_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623585745480-984650643_09ccffab-0a89-4292-8c57-b12143f7733c_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623585881702-813961328_e9d13889-731f-4587-94c6-7c4122da7fa7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623585923567-875310746_cc00849a-7ace-41b2-82a4-0d5acb1f9c30_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623585925049-47331327_b843edd0-21d9-43f6-b80d-17c33d23e06b_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623586043819-666350170_61452bd8-8c6b-4c7c-be8c-b1c621bd67d7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623586103647-73205396_19ede3e3-c0c5-4a2d-9c8d-01a17984bd7d_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623586312574-278383732_de0a7c47-28a1-4feb-93d3-717bdccd03ff_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647089492-786995189_5c7d6c36-d959-4ed8-ab10-b33808bf4992_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647178432-726492236_37cc1d46-877f-4fd4-be7a-1606da538192_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647264184-765039667_47e1af69-38bd-4898-aa73-1586e9e036f1_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647333037-597433687_7305fddb-ce24-4505-bb77-a9f5b45abdc3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647561426-829593603_08ad5ef2-646c-4ee5-af63-0e6ea3d18126_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647642732-213937654_0bed50cc-f2b2-46aa-806a-ea096b7e6529_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647871884-216092422_955b3339-4f9b-4491-b0aa-61b775e11821_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623647953052-603608445_59320584-d91b-47dd-b5ec-ef623b7e1125_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648030600-565332997_7601aec8-0ec1-4b2f-b3a5-38ec6fd1abbb_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648064127-120641677_ca9b235a-f85c-43ca-9da3-4b301ff65474_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648109914-561977174_66391c39-d613-47d0-b262-9853a266fad0_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648109916-899139874_ba983f9a-609c-4d40-8578-1cd6a13f4cf1_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648112071-98412924_02f2c881-4f29-4db0-ae70-233f727c48bc_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648132805-817312858_bbd84e9c-3b55-4177-9687-9bff10f7390a_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648152774-494715680_94f9d331-9061-4491-8dc5-442d3af3ce2a_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648152776-211068940_7ab516f5-4dae-4782-95a0-6df9c9cfc89c_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648153176-464065104_79fb780d-1454-428f-9be5-d10fe182fb4e_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648188680-232893524_e5440253-0f58-46ff-a5e2-5395cc4c543a_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648229540-14872962_461b181c-8a3f-49f6-8702-5a37224228ce_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648267015-940738731_cd22462a-e164-4c8e-bb5f-bc7989214f57_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648369897-883246912_5b86468d-3291-46e6-bbbc-47602e48f6d4_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648531052-316504983_ca3c6a65-3062-4f3d-942b-c806f8b766d0_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648644900-91890394_da906ccf-3fdf-4b51-8dde-ecc9e92aebc8_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623648703500-372743838_03d91c68-887e-488f-a7cb-6a01a6781ff2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623654160327-389457148_9cff0ed1-6ca2-4a98-8090-2476b6dde8aa_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623917355898-986654615_09475d2a-0350-4d6d-b78e-574e85e72813_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623917418972-127705829_040c7c6f-ced0-4531-bd00-a8a75716aac7_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623917896475-370743932_69d66a36-8910-4c30-a661-0aebfde05b30_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/users/1623918036032-823556384_41ceaa5b-d9fa-45e5-824d-04f111f255f7_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ArticleCategoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ArticleCategoryModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ArticleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BankModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BankModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BrandModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BrandModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CartModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CartModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PermissionUserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PermissionUserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProductCategoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductCategoryModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProductModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/RoleUserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/RoleUserModel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,19 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+        <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3500">
-              <caret line="125" selection-start-line="125" selection-end-line="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/UserModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+            <state relative-caret-position="448">
+              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -117,35 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/UserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="176" column="33" lean-forward="true" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/PermissionModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1218">
-              <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/PermissionRoleModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="52" selection-start-line="52" selection-end-line="55" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="336">
+              <caret line="177" column="74" lean-forward="true" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -187,7 +93,6 @@
         <option value="$PROJECT_DIR$/routes/panel/brandRoutes.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Profile/MyOrderController.js" />
         <option value="$PROJECT_DIR$/app/Policies/CartPolicy.js" />
-        <option value="$PROJECT_DIR$/app/Models/CartModel.js" />
         <option value="$PROJECT_DIR$/app/Requests/CartRequest.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Profile/MyCartController.js" />
         <option value="$PROJECT_DIR$/routes/profile/MyCartsRoutes.js" />
@@ -195,15 +100,22 @@
         <option value="$PROJECT_DIR$/routes/panel/userRoutes.js" />
         <option value="$PROJECT_DIR$/app/Policies/UserPolicy.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Auth/AuthController.js" />
-        <option value="$PROJECT_DIR$/app/Models/RoleUserModel.js" />
-        <option value="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" />
-        <option value="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" />
         <option value="$PROJECT_DIR$/database/connection.js" />
-        <option value="$PROJECT_DIR$/app/Models/PermissionUserModel.js" />
-        <option value="$PROJECT_DIR$/app/Models/PermissionModel.js" />
         <option value="$PROJECT_DIR$/app/Models/UserModel.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Front/HomeController.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/app/Models/RoleUserModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/ProductCategoryModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/ArticleCategoryModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/ArticleModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/BankModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/BrandModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/CartModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/PermissionUserModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/ProductModel.js" />
+        <option value="$PROJECT_DIR$/app/Models/PermissionModel.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" />
       </list>
     </option>
@@ -237,6 +149,19 @@
               <item name="nodejs_project_13_ACL" type="b2602c69:ProjectViewProjectNode" />
               <item name="nodejs_project_13_ACL" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs_project_13_ACL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs_project_13_ACL" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs_project_13_ACL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs_project_13_ACL" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -247,7 +172,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/vue_project/nuxtjs_project_9_ACL" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -288,15 +213,17 @@
       <workItem from="1625550640900" duration="2438000" />
       <workItem from="1625563698149" duration="5926000" />
       <workItem from="1625633020657" duration="4687000" />
-      <workItem from="1625647058916" duration="9797000" />
+      <workItem from="1625647058916" duration="9996000" />
+      <workItem from="1625718870785" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94701000" />
+    <option name="totallyTimeSpent" value="102623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -325,68 +252,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/ProductController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Requests/userRequestValidation.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Requests/RoleRequest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/panel/roleRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Requests/userRequest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/RoleModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/RoleController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/TokenModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/TransactionModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/UserLogModel.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/ArticleController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -441,20 +306,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Profile/MyOrderController.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/BrandModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="6" lean-forward="true" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/CartModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Profile/MyProfileController.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -543,23 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductCategoryModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="58" selection-start-line="58" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bcrypt/bcrypt.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -577,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/RoleUserModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1624">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/DashboardController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -598,13 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/storage/users/1625653691067-433329380_b6458151-b4de-4951-b65b-64a423355178_garena.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -615,38 +435,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/PermissionModel.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1218">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+        <state relative-caret-position="742">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ArticleCategoryModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ArticleLikeModel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ArticleModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/BankModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/BrandModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EmployeeModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2016" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CartModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductCategoryModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/PermissionRoleModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="52" selection-start-line="52" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="980">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        <state relative-caret-position="490">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-784">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/RoleModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/UserModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+        <state relative-caret-position="784">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/PermissionModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="38" column="2" selection-start-line="38" selection-end-line="100" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/RoleUserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/sequelize.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/TokenModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/TransactionModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2716">
+          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/UserLogModel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/UserController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="176" column="33" lean-forward="true" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+        <state relative-caret-position="336">
+          <caret line="177" column="74" lean-forward="true" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
         </state>
       </provider>
     </entry>
