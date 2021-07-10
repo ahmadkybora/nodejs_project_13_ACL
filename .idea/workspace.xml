@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34c1b46f-f3c6-452c-847c-4dc4d857f6b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Panel/RoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Panel/RoleController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ArticleCategoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ArticleCategoryModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ArticleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ArticleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BankModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BankModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BrandModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BrandModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CartModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CartModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PermissionRoleModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PermissionUserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PermissionUserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductCategoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductCategoryModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductFavoriteLikeModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/RoleUserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/RoleUserModel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,20 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/RoleController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="-1302">
+              <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/UserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="177" column="74" lean-forward="true" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
+            <state relative-caret-position="504">
+              <caret line="18" column="11" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -83,7 +73,6 @@
         <option value="$PROJECT_DIR$/app/Requests/RoleRequest.js" />
         <option value="$PROJECT_DIR$/app/Models/RoleModel.js" />
         <option value="$PROJECT_DIR$/app/Models/RoleUser.js" />
-        <option value="$PROJECT_DIR$/app/Controllers/Panel/RoleController.js" />
         <option value="$PROJECT_DIR$/app/Policies/BrandPolicy.js" />
         <option value="$PROJECT_DIR$/routes/profile/MyProfileRoutes.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Panel/DashboardController.js" />
@@ -116,6 +105,7 @@
         <option value="$PROJECT_DIR$/app/Models/PermissionUserModel.js" />
         <option value="$PROJECT_DIR$/app/Models/ProductModel.js" />
         <option value="$PROJECT_DIR$/app/Models/PermissionModel.js" />
+        <option value="$PROJECT_DIR$/app/Controllers/Panel/RoleController.js" />
         <option value="$PROJECT_DIR$/app/Controllers/Panel/UserController.js" />
       </list>
     </option>
@@ -132,7 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,11 +157,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/vue_project/nuxtjs_project_9_ACL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -214,12 +204,13 @@
       <workItem from="1625563698149" duration="5926000" />
       <workItem from="1625633020657" duration="4687000" />
       <workItem from="1625647058916" duration="9996000" />
-      <workItem from="1625718870785" duration="7723000" />
+      <workItem from="1625718870785" duration="7759000" />
+      <workItem from="1625892238985" duration="3054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102623000" />
+    <option name="totallyTimeSpent" value="105713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -252,13 +243,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/ArticleController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/panel/dashboardRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -564,14 +548,21 @@
     <entry file="file://$PROJECT_DIR$/app/Models/PermissionUserModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/UserController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="177" column="74" lean-forward="true" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
+        <state relative-caret-position="504">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controllers/Panel/RoleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1302">
+          <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
         </state>
       </provider>
     </entry>

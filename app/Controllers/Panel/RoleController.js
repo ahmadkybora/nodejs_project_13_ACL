@@ -76,53 +76,96 @@ async function store(req, res) {
     let role = req.newRol.role;
     let permissions = req.newRol.permission;
 
-    await Role.create({
+    let newRole = await Role.create({
         name: role
-    })
-        .then(async result => {
-            let roleId = await Role.findOne({
-                where: {
-                    name: role
-                }
-            });
-            if (result) {
-                for (let i = 0; i < permissions.length; i++) {
-                    await PermissionRole.create({
-                        roleId: roleId.id,
-                        permissionId: permissions[i]
-                    })
-                }
+    });
+
+    if (newRole) {
+        let roleId = await Role.findOne({
+            where: {
+                name: role
             }
-        })
-        .then(async () => {
+        });
+
+        if (roleId) {
+            for (let i = 0; i < permissions.length; i++) {
+                await PermissionRole.create({
+                    roleId: roleId.id,
+                    permissionId: permissions[i]
+                }).then((result) => {
+                    console.log(result);
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
             return res.status(201).json({
                 state: true,
                 message: "Success!",
                 data: await Role.findAll(),
                 errors: null
             });
-        })
-        .catch(async () => {
-            return res.status(200).json({
-                state: false,
-                message: "Failed!",
-                data: await Role.findAll(),
-                errors: null
-            });
+        }
+        return res.status(200).json({
+            state: false,
+            message: "Failed!",
+            data: await Role.findAll(),
+            errors: null
         });
+    }
+    return res.status(200).json({
+        state: false,
+        message: "Failed!",
+        data: await Role.findAll(),
+        errors: null
+    });
 }
 
 async function update(req, res) {
-    try {
-        await User.update(req.body, {
+    let role = req.newRol.role;
+    let permissions = req.newRol.permission;
+
+    let newRole = await Role.update({
+        name: role
+    });
+
+    if (newRole) {
+        let roleId = await Role.findOne({
             where: {
-                id: req.params.id
+                name: role
             }
         });
-        res.redirect('/panel/users')
-    } catch (err) {
-        console.log(err)
+
+        if (roleId) {
+            for (let i = 0; i < permissions.length; i++) {
+                await PermissionRole.update({
+                    roleId: roleId.id,
+                    permissionId: permissions[i]
+                }).then((result) => {
+                    console.log(result);
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
+            return res.status(201).json({
+                state: true,
+                message: "Success!",
+                data: await Role.findAll(),
+                errors: null
+            });
+        }
+        return res.status(200).json({
+            state: false,
+            message: "Failed!",
+            data: await Role.findAll(),
+            errors: null
+        });
     }
+    return res.status(200).json({
+        state: false,
+        message: "Failed!",
+        data: await Role.findAll(),
+        errors: null
+    });
 }
 
 async function destroy(req, res) {
